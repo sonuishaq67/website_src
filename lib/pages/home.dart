@@ -21,11 +21,11 @@ class _HomeState extends State<Home> {
 
 String os(){
   if(operatingSystem.isLinux)
-    return "linux";
+    return "LINUX";
   else if(operatingSystem.isMac)
-    return "mac";
+    return "MAC";
   else if(operatingSystem.isUnix)
-    return "unix";
+    return "UNIX";
   else
-    return "Windows";
+    return "WINDOWS";
 }
