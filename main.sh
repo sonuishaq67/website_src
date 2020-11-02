@@ -1,5 +1,9 @@
 #!/bin/bash
 source /home/ubuntu/.bashrc
+send_mail() {
+    cat ~/website_src/.pull >>$MAILFILE
+    cat $MAILFILE | /usr/sbin/ssmtp ishaqshaik084@gmail.com
+}
 MAILFILE=/home/ubuntu/mail.log
 git pull &>.pull
 c1=$(cat .pull | grep "up to date" | wc -l)
