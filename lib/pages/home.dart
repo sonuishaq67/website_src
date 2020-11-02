@@ -14,7 +14,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(title: Text('Welcome to my website'),centerTitle: true,backgroundColor: Colors.red,),
-      body: Center(child: Text('$osUsed',style: TextStyle(color: Colors.white,fontSize: 40),),),
+      body: Center(child: Text('$osUsed for hosting',style: TextStyle(color: Colors.white,fontSize: 40),),),
     );
   }
 }
