@@ -12,10 +12,13 @@ c3=$(cat .pull | grep "Aborting" | wc -l)
 if [ "$c1" -gt 0 ]; then
     exit
 elif [ "$c2" -gt 0 ]; then
-    cd /home/ubuntu/website_src && flutter build web
+    cd /home/ubuntu/website_src 
+    flutter clean
+    flutter build web
     commitMsg=$(git log -1 | tail -n 1)
-    cd build
+    cd build/web
     mv ./*  ../../website
+    cd /home/ubuntu/website
     git add .
     git commit -m "$commitMsg"
     git push
