@@ -17,8 +17,9 @@ elif [ "$c2" -gt 0 ]; then
     flutter build web
     commitMsg=$(git log -1 | tail -n 1)
     cd build/web
-    mv ./*  ../../website
+    cp -r ./*  /home/ubuntu/website
     cd /home/ubuntu/website
+    rm -r ./*
     git add .
     git commit -m "$commitMsg"
     git push
