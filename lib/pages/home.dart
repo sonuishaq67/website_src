@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:personal_website/constantsIUse/freqConstants.dart';
 import 'package:platform_detect/platform_detect.dart';
 
 class Home extends StatefulWidget {
@@ -11,10 +12,14 @@ class _HomeState extends State<Home> {
   String osUsed=os();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black,
-      appBar: AppBar(title: Text('Welcome to my website'),centerTitle: true,backgroundColor: Colors.red,),
-      body: Center(child: Text('$osUsed for hosting',style: TextStyle(color: Colors.white,fontSize: 40),),),
+    return MaterialApp(
+      title: 'si67',
+      color: Colors.red,
+      home: Scaffold(
+        backgroundColor: Colors.black,
+        body: Center(child: Text('$osUsed',style: TextStyle(color: Colors.white,fontSize: 40),),),
+        bottomNavigationBar:bottomAppBar,
+      ),
     );
   }
 }

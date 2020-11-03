@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:http/http.dart' as http;
 
 class Loading extends StatefulWidget {
   @override
@@ -10,8 +9,7 @@ class Loading extends StatefulWidget {
 
 class _LoadingState extends State<Loading> {
   void waitForIt() async {
-    await new Future.delayed(const Duration(seconds: 3));
-    Navigator.pushReplacementNamed(context, '/home');
+    await Navigator.pushReplacementNamed(context, '/home');
   }
 
   @override
@@ -23,12 +21,14 @@ class _LoadingState extends State<Loading> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'loading...',
+      theme: new ThemeData(scaffoldBackgroundColor: Colors.black),
       home: Center(
         child: Scaffold(
           backgroundColor: HexColor('#000000'),
             body: SpinKitDoubleBounce(
-                  color: Colors.white,
-                  size: 35.0,
+                  color: Colors.red[600],
+                  size: 50.0,
                 ),
             ),
 
