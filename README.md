@@ -1,6 +1,6 @@
 # personal_website
 
-## source code for my flutter application 
+## source code for my flutter application hosted on [sonuishaq67.github.io](https://sonuishaq67.github.io)
 
 ## Getting Started
 
