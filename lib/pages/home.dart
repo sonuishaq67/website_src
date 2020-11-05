@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:personal_website/constantsIUse/freqConstants.dart';
-import 'package:platform_detect/platform_detect.dart';
+import 'package:personal_website/constantsIUse/functions.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -17,20 +17,10 @@ class _HomeState extends State<Home> {
       color: Colors.red,
       home: Scaffold(
         backgroundColor: Colors.black,
-        body: Center(child: Text('$osUsed',style: TextStyle(color: Colors.white,fontSize: 40),),),
-        bottomNavigationBar:bottomAppBar,
+        body: Center(child: Text('$osUsed',style: textStyleHeading,),),
+        bottomNavigationBar: bottomAppBar(context),
       ),
     );
   }
 }
 
-String os(){
-  if(operatingSystem.isLinux)
-    return "LINUX";
-  else if(operatingSystem.isMac)
-    return "MAC";
-  else if(operatingSystem.isUnix)
-    return "UNIX";
-  else
-    return "WINDOWS";
-}

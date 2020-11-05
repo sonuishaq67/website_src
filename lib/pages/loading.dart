@@ -9,13 +9,15 @@ class Loading extends StatefulWidget {
 
 class _LoadingState extends State<Loading> {
   void waitForIt() async {
-    await Navigator.pushReplacementNamed(context, '/home');
+    Navigator.of(context).pushNamed('/home');
   }
 
   @override
   void initState() {
     super.initState();
-    waitForIt();
+    Future.delayed(Duration.zero, () async {
+      waitForIt();
+    });
   }
 
   @override
@@ -31,7 +33,6 @@ class _LoadingState extends State<Loading> {
                   size: 50.0,
                 ),
             ),
-
         ),
       );
   }

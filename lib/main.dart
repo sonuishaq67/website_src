@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_website/pages/aboutme.dart';
 import 'package:personal_website/pages/loading.dart';
 import 'package:personal_website/pages/home.dart';
 void main() {
@@ -7,6 +8,7 @@ void main() {
     routes: {
       '/': (context) => Loading(),
       '/home': (context) => Home(),
+      '/about':(context)=>AboutMe(),
     },
   ));
 }
