@@ -31,7 +31,7 @@ class _AboutMeState extends State<AboutMe> {
                 children: [
                   Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem integer vitae justo eget magna fermentum iaculis. Habitasse platea dictumst vestibulum rhoncus est pellentesque. Posuere lorem ipsum dolor sit amet. Nec feugiat nisl pretium fusce. Sit amet nulla facilisi morbi tempus iaculis. Nisl nisi scelerisque eu ultrices vitae. Et malesuada fames ac turpis egestas. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum. Neque convallis a cras semper auctor neque vitae tempus quam. Dapibus ultrices in iaculis nunc sed augue. Id volutpat lacus laoreet non. Ac feugiat sed lectus vestibulum mattis ullamcorper velit sed. Ultrices neque ornare aenean euismod elementum nisi quis eleifend. Fusce id velit ut tortor pretium viverra. Commodo elit at imperdiet dui accumsan sit amet nulla facilisi. Praesent tristique magna sit amet purus gravida. Nullam vehicula ipsum a arcu cursus vitae congue mauris.",style: textStyleP,),
                   SizedBox(height: thatconstheight,width: thatconstheight,),
-                  Image.asset('index.jpg',height: thatconstheight*2,width: thatconstheight*2,),
+                  Image.network('https://i.imgur.com/6yKO2x6.jpeg',height: thatconstheight*4,width: thatconstheight*4,),
                   SizedBox(height: thatconstheight,width: thatconstheight,),
                   Text('Currently studying at MSRIT',style: textStyleP,),
                 ],
