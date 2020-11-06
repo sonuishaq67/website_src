@@ -9,7 +9,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  String osUsed=os();
+  String osUsed = os();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,10 +17,14 @@ class _HomeState extends State<Home> {
       color: Colors.red,
       home: Scaffold(
         backgroundColor: Colors.black,
-        body: Center(child: Text('$osUsed',style: textStyleHeading,),),
+        body: Center(
+          child: Text(
+            '$osUsed',
+            style: textStyleHeading,
+          ),
+        ),
         bottomNavigationBar: bottomAppBar(context),
       ),
     );
   }
 }
-

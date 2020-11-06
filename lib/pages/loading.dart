@@ -28,13 +28,12 @@ class _LoadingState extends State<Loading> {
       home: Center(
         child: Scaffold(
           backgroundColor: HexColor('#000000'),
-            body: SpinKitDoubleBounce(
-                  color: Colors.red[600],
-                  size: 50.0,
-                ),
-            ),
+          body: SpinKitDoubleBounce(
+            color: Colors.red[600],
+            size: 50.0,
+          ),
         ),
-      );
+      ),
+    );
   }
 }
-
