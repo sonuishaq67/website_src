@@ -9,7 +9,7 @@ dynamic bottomAppBar(BuildContext context) => BottomAppBar(
         children: [
           Spacer(),
           IconButton(
-              icon: Icon(Icons.alarm_on_sharp),
+              icon: Icon(Icons.account_box_outlined),
               onPressed: () => Navigator.of(context).pushNamed('/about')),
           Spacer(),
           IconButton(icon: Icon(Icons.menu), onPressed: () {}),

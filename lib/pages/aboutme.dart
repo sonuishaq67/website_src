@@ -8,7 +8,6 @@ import 'package:personal_website/constantsIUse/functions.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../constantsIUse/freqConstants.dart';
 import 'package:delayed_display/delayed_display.dart';
-import 'package:flutter_linkify/flutter_linkify.dart';
 
 class AboutMe extends StatefulWidget {
   @override
