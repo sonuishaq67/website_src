@@ -1,4 +1,7 @@
 dist: focal
+language: dart
+git:
+  depth: 3
 before_install:
   - sudo apt-get update
 install:
