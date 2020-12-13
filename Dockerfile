@@ -1,8 +1,20 @@
 # syntax=docker/dockerfile:experimental
 #source image
-FROM  cirrusci/flutter:dev-web
+FROM ubuntu:latest AS build-env
 #updating the system
 RUN sudo apt-get update
+RUN apt-get install -y curl git wget unzip libgconf-2-4 gdb libstdc++6 libglu1-mesa fonts-droid-fallback lib32stdc++6 python3
+RUN apt-get clean
+RUN git clone https://github.com/flutter/flutter.git /usr/local/flutter -b dev --depth 1
+ENV PATH="/usr/local/flutter/bin:/usr/local/flutter/bin/cache/dart-sdk/bin:${PATH}"
+RUN flutter doctor -v
+RUN flutter channel dev
+RUN flutter upgrade
+RUN flutter config --enable-web
+RUN flutter config --no-enable-ios
+RUN flutter config --no-enable-android
+
+
 
 RUN git config --global user.name "Ishaq Shaik"
 RUN git config --global user.email "ishaqshaik084@gmail.com"
