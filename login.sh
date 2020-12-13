@@ -25,4 +25,4 @@ flutter clean
 flutter build web 
 commitMsg=$(git log -1 | tail -n 1)
 cp -r build/web/* ../sonuishaq67.github.io/
-cd sonuishaq67.github.io && git add . && git commit -m $commitMsg && git push
+cd ../sonuishaq67.github.io && git add . && git commit -m $commitMsg && git push
