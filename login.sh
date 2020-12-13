@@ -2,7 +2,7 @@
 pwd
 cd ..
 git clone https://github.com/sonuishaq67/sonuishaq67.github.io 
-cd ../sonuishaq67.github.io
+cd sonuishaq67.github.io
 rm -r *
 cd ../website_src
 apt-get update
