@@ -3,4 +3,4 @@ services:
 before_install:
   - docker pull cirrusci/flutter:dev-web
 install:
-  - docker build --secret username=$github_username,password=$github_password --tag ishaq:1.0 .
+  - DOCKER_BUILDKIT=1 docker build --secret username=$github_username,password=$github_password --tag ishaq:1.0 .

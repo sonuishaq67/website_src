@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.black,
         body: Center(
           child: Text(
-            '$osUsed',
+            'you use $osUsed',
             style: textStyleHeading,
           ),
         ),
