@@ -1,7 +1,7 @@
 #!/bin/sh
 pwd
 cd ..
-git clone https://github.com/sonuishaq67/sonuishaq67.github.io 
+git clone https://github.com/sonuishaq67/sonuishaq67.github.io
 cd sonuishaq67.github.io
 rm -r *
 cd ../website_src
@@ -18,11 +18,10 @@ flutter config --no-enable-ios
 flutter config --no-enable-android
 git config --global user.name "Ishaq Shaik"
 git config --global user.email "ishaqshaik084@gmail.com"
-echo "machine github.com" >>/root/.netrc
-echo "login $github_username" >>/root/.netrc
-echo "password $github_password" >>/root/.netrc
+git config --global credential.helper store
+echo "https://$github_username:$github_password@github.com" >>~/.git-credentials
 flutter clean
-flutter build web 
+flutter build web
 commitMsg=$(git log -1 | tail -n 1)
 cp -r build/web/* ../sonuishaq67.github.io/
 cd ../sonuishaq67.github.io && git add . && git commit -m "$commitMsg" && git push
