@@ -7,4 +7,6 @@ before_install:
   - sudo apt-get update
   - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
 install:
-  - COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker build --secret username=$github_username,password=$github_password --tag ishaq:1.0 .
+  - COMPOSE_DOCKER_CLI_BUILD=1
+  - DOCKER_BUILDKIT=1
+  - docker build --secret username=$github_username,password=$github_password --tag ishaq:1.0 .
