@@ -10,7 +10,7 @@ RUN git config --global user.email "ishaqshaik084@gmail.com"
 
 # cloning my target repo
 RUN sudo git clone https://github.com/sonuishaq67/sonuishaq67.github.io
-
+RUN flutter upgrade
 #removing everything lol?
 RUN cd sonuishaq67.github.io && sudo rm -r * && cd ..
 
