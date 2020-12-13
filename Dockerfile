@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:experimental
 #source image
 FROM  cirrusci/flutter:dev-web
 #updating the system
