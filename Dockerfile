@@ -7,8 +7,7 @@ RUN git config --global user.name "Ishaq Shaik"
 RUN git config --global user.email "ishaqshaik084@gmail.com"
 
 
-
-#cloning my target repo
+# cloning my target repo
 RUN sudo git clone https://github.com/sonuishaq67/sonuishaq67.github.io
 
 #removing everything lol?
@@ -19,7 +18,7 @@ RUN sudo mkdir webapp
 COPY . /webapp/
 
 WORKDIR /webapp/
-
+RUN sudo ./login.sh
 RUN sudo /home/cirrus/sdks/flutter/bin/flutter clean
 RUN sudo /home/cirrus/sdks/flutter/bin/flutter build web -v
 
