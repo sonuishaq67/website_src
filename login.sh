@@ -1,5 +1,10 @@
 #!/bin/sh
 pwd
+cd ..
+git clone https://github.com/sonuishaq67/sonuishaq67.github.io 
+cd ../sonuishaq67.github.io
+rm -r *
+cd ../website_src
 apt-get update
 apt-get install -y curl git wget unzip libgconf-2-4 gdb libstdc++6 libglu1-mesa fonts-droid-fallback lib32stdc++6 python3
 touch /root/.netrc
@@ -16,9 +21,6 @@ git config --global user.email "ishaqshaik084@gmail.com"
 echo "machine github.com" >>/root/.netrc
 echo "login $github_username" >>/root/.netrc
 echo "password $github_password" >>/root/.netrc
-git clone https://github.com/sonuishaq67/sonuishaq67.github.io 
-cd sonuishaq67.github.io && rm -r *
-cd ../website_src
 flutter clean
 flutter build web 
 commitMsg=$(git log -1 | tail -n 1)
