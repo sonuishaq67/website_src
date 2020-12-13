@@ -1,13 +1,5 @@
 dist: focal
-services:
-  - docker
 before_install:
-  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-  - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
   - sudo apt-get update
-  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
-  - docker pull cirrusci/flutter:dev-web
 install:
-  - COMPOSE_DOCKER_CLI_BUILD=1
-  - DOCKER_BUILDKIT=1
-  - docker build --secret username=$github_username,password=$github_password --tag ishaq:1.0 .
+  - sudo ./login.sh
