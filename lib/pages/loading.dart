@@ -29,7 +29,7 @@ class _LoadingState extends State<Loading> {
         child: Scaffold(
           backgroundColor: HexColor('#000000'),
           body: SpinKitDoubleBounce(
-            color: Colors.red[600],
+            color: Colors.red,
             size: 50.0,
           ),
         ),

@@ -25,7 +25,7 @@ class _AboutMeState extends State<AboutMe> {
         backgroundColor: Colors.black,
         appBar: AppBar(
           title: Text(
-            'about',
+            'about'.toUpperCase(),
             style: textStyleHeading,
           ),
           centerTitle: true,
